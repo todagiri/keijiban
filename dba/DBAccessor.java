@@ -54,7 +54,7 @@ public class DBAccessor{
 	public ResultSet read(String sql){
 			try{
 				
-			System.out.println("リード");
+			System.out.println("read");
 			
 			//PreparedStatement st = Connect.prepareStatement(sql);
 			// SQL文をDBに送るためのStatementオブジェクトを生成
