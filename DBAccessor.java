@@ -16,20 +16,12 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 
-/**
- * OracleDBとの通信に関する処理群です。
- *
- * @author Fumihiro Miyazaki
- */
+//OracleDBとの通信に関する処理群です。
+
 public class DBAccessor{
 	// DBに接続するためのConnection型のオブジェクト
 	private Connection Connect;
-	/**
-	* OracleDBに接続するためのメソッドです。
-	*
-	* @param 	なし
-	* @return	void
-	*/
+	//OracleDBに接続するためのメソッド
 	public void connect (){
 		try{
 		/**
