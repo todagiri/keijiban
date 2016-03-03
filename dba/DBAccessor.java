@@ -59,7 +59,8 @@ public class DBAccessor{
 			}
 		}
 	
-	public ResultSet read(String sql)//{ 表データ read ( ＳＱＬ文 ){
+	public ResultSet read(String sql){
+		// 表データ read ( ＳＱＬ文 )
 		// 例外をキャッチする可能性のある処理
 			try{
 				
@@ -83,6 +84,7 @@ public class DBAccessor{
 		return null;
 	}
 	
+<<<<<<< HEAD
 	/**
 	* OracleDBにデータを書き込むするためのメソッドです。
 	*
@@ -91,6 +93,10 @@ public class DBAccessor{
 	*/
 		
 	public void write (String sql){/*ＳＱＬ文*/ 
+=======
+	//OracleDBにデータを書き込むするためのメソッドです。
+public void write (String sql){
+>>>>>>> refs/remotes/ss15394913/master
 		try{ 
 			// SQL文をDBに送るためのStatementオブジェクトを生成
 			Statement st = Connect.createStatement();
@@ -134,7 +140,8 @@ public class DBAccessor{
 		catch(Exception e){}
 	}
 }
-		
+
+}	
 
 		
 // -EOF-
