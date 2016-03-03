@@ -52,11 +52,9 @@ public class DBAccessor{
 		}
 	
 	public ResultSet read(String sql){
-		// 表データ read ( ＳＱＬ文 )
-		// 例外をキャッチする可能性のある処理
 			try{
 				
-			System.out.println("read");
+			System.out.println("リード");
 			
 			//PreparedStatement st = Connect.prepareStatement(sql);
 			// SQL文をDBに送るためのStatementオブジェクトを生成
