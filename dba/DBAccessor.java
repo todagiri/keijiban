@@ -80,9 +80,7 @@ public void write (String sql){
 			// SQL文をDBに送るためのStatementオブジェクトを生成
 			Statement st = Connect.createStatement();
 			System.out.println(sql);
-			// SQL文を実行
 			st.executeUpdate(sql);
-			// 結果をコミット
 			commit();
 		}
 		//例外をキャッチする可能性のある処理
