@@ -16,7 +16,7 @@ public class CommentBean implements Bean{
 		this.threadNo = threadNo;
 	}
 	//ƒRƒƒ“ƒg”Ô†
-	public void setCommentNo(int commentNo){
+	public void setNo(int commentNo){
 		this.commentNo = commentNo;
 	}
 	//“ŠeÒ–¼
