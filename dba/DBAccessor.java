@@ -32,36 +32,34 @@ public class DBAccessor{
 	*/
 	public void connect (){
 		try{
-		/**
-		* 
-		* OracleDBからデータを読み込むするためのメソッドです。
-		* @param 	ＳＱＬ文 sql(String)
-		* @return	表データ
-		*/
-		// OracleDriverクラスのオブジェクトを生成
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// OracleDBに接続する
-			Connect = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl","info", "pro");
-			System.out.println("接続完了");
-			// オートコミット機能をOFFにする
-			Connect.setAutoCommit(false);	
-		}
+			/**
+			* 
+			* OracleDBからデータを読み込むするためのメソッドです。
+			* @param 	ＳＱＬ文 sql(String)
+			* @return	表データ
+			*/
+			// OracleDriverクラスのオブジェクトを生成
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				// OracleDBに接続する
+				Connect = DriverManager.getConnection(
+						"jdbc:oracle:thin:@localhost:1521:orcl","info", "pro");
+				System.out.println("接続完了");
+				// オートコミット機能をOFFにする
+				Connect.setAutoCommit(false);	
+			}
 		//例外をキャッチする可能性のある処理
-		catch(ClassNotFoundException e){
-			System.out.println("class:Accessor_method:connect() ClassNotFoundException");
+			catch(ClassNotFoundException e){
+				System.out.println("class:Accessor_method:connect() ClassNotFoundException");
+			}
+			catch(SQLException e){
+				System.out.println("class:Accessor_method:connect() SQLException");
+			}
+			catch(Exception e){
+				System.out.println("class:Accessor_method:connect() Exception");
+			}
 		}
-		catch(SQLException e){
-			System.out.println("class:Accessor_method:connect() SQLException");
-		}
-		catch(Exception e){
-			System.out.println("class:Accessor_method:connect() Exception");
-		}
-	}
 	
-	
-	
-	public ResultSet read(String sql){// 表データ read ( ＳＱＬ文 )
+	public ResultSet read(String sql)//{ 表データ read ( ＳＱＬ文 ){
 		// 例外をキャッチする可能性のある処理
 			try{
 				
@@ -110,7 +108,6 @@ public class DBAccessor{
 			System.out.println("class:Accessor_method:write() Exception");
 		}
 	}
-
 		/**
 	* OracleDBにデータを書き込むするためのメソッドです。
 	*
