@@ -51,7 +51,8 @@ public class DBAccessor{
 			}
 		}
 	
-	public ResultSet read(String sql)//{ 表データ read ( ＳＱＬ文 ){
+	public ResultSet read(String sql){
+		// 表データ read ( ＳＱＬ文 )
 		// 例外をキャッチする可能性のある処理
 			try{
 				
@@ -75,14 +76,8 @@ public class DBAccessor{
 		return null;
 	}
 	
-	/**
-	* OracleDBにデータを書き込むするためのメソッドです。
-	*
-	* @param 	ＳＱＬ文 sql(String)
-	* @return	void
-	*/
-		
-public void write (String sql)( /*ＳＱＬ文*/ ){
+	//OracleDBにデータを書き込むするためのメソッドです。
+public void write (String sql){
 		try{ 
 			// SQL文をDBに送るためのStatementオブジェクトを生成
 			Statement st = Connect.createStatement();
@@ -125,7 +120,8 @@ public void write (String sql)( /*ＳＱＬ文*/ ){
 		catch(SQLException e){}
 		catch(Exception e){}
 }
-		
+
+}	
 
 		
 // -EOF-
