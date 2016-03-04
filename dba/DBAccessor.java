@@ -16,11 +16,7 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.Statement;
 
-/**
- * OracleDBとの通信に関する処理群です。
- *
- * @author Fumihiro Miyazaki
- */
+//OracleDBとの通信に関する処理群です
 public class DBAccessor{
 	// DBに接続するためのConnection型のオブジェクト
 	private Connection Connect;
@@ -82,7 +78,7 @@ public class DBAccessor{
 		return null;
 	}
 	
-<<<<<<< HEAD
+
 	/**
 	* OracleDBにデータを書き込むするためのメソッドです。
 	*
@@ -91,10 +87,7 @@ public class DBAccessor{
 	*/
 		
 	public void write (String sql){/*ＳＱＬ文*/ 
-=======
 	//OracleDBにデータを書き込むするためのメソッドです。
-public void write (String sql){
->>>>>>> refs/remotes/ss15394913/master
 		try{ 
 			// SQL文をDBに送るためのStatementオブジェクトを生成
 			Statement st = Connect.createStatement();
@@ -137,7 +130,7 @@ public void write (String sql){
 	}
 }
 
-}	
+
 
 		
 // -EOF-

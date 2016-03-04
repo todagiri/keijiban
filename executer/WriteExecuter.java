@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import bean.Bean;
 import bean.ThreadBean;
 import bean.CommentBean;
-import dba.Accessor;
+import dba.DBAccessor;
 import check.*;
 
 public class WriteExecuter extends Executer{
@@ -15,10 +15,10 @@ public class WriteExecuter extends Executer{
 	public Object execute(Object bean){
 		accessor.connect();
 		
-		ContentsBean cb = (ContentsBean)bean;
+		CommentBean cb = (CommentBean)bean;
 		
 		//シングルクォート置換
-		cb = CheckReplace.check(cb);
+		cb = ReplaceCheck.check(cb);
 		
 		String sql = "INSERT INTO Contents( TH_NO, CON_NO, CON_NAME, CON_DATE, CON_TEXT) VALUES(";
 		//sql = sql.concat("1, 0, '"+cb.getName()+"', SYSDATE, '"+cb.getText()+"' )");
