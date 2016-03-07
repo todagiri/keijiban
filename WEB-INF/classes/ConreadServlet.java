@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ConReadServlet extends HttpServlet{
 	ReadExecuter RE = new ReadExecuter();
 	
-	public void doGet(HttpServletRequest req,HttpServletResponse res)
+	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
 		
