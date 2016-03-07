@@ -20,7 +20,7 @@ public class WriteExecuter extends Executer{
 		//シングルクォート置換
 		cb = ReplaceCheck.check(cb);
 		
-		String sql = "INSERT INTO Contents( TH_NO, CON_NO, CON_NAME, CON_DATE, CON_TEXT) VALUES(";
+		String sql = "INSERT INTO KOMMENT( TH_NO, CON_NO, CON_NAME, CON_DATE, CON_TEXT) VALUES(";
 		//sql = sql.concat("1, 0, '"+cb.getName()+"', SYSDATE, '"+cb.getText()+"' )");
 		
 		//Contents表に投稿をインサート。CON_NO（コンテンツの通し番号）はそのスレッドのコンテンツ数+1を格納。
