@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ThReadServlet extends HttpServlet{
 	ThReadExecuter ThRE=new ThReadExecuter();
 	
-	public void doPost(HttpServletRequest req,HttpServletResponse res)
+	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
 		ThreadBean TB=new ThreadBean();
