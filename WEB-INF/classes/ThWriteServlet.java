@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ThWriteServlet extends HttpServlet{
 	
 	ThWriteExecuter ThWe=new ThWriteExecuter();
-	WriteExecuter cWe =new WriteExecuter();
+	WriteExecuter We =new WriteExecuter();
 	ThReadExecuter TRE=new ThReadExecuter();
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
