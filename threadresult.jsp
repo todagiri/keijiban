@@ -59,7 +59,7 @@
 		</c:forEach>
 	</table>
 	<br>
-	<--% no-break space の略で、改行されない空白文字 %-->
+	<!-- no-break space の略で、改行されない空白文字 -->
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
