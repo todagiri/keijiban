@@ -11,13 +11,8 @@
 <body>
 	<div class="text" style=" text-align:center;">
 	<h1>スレッド作成フォーム</h1>
-<<<<<<< HEAD
-	<a href="/keijiban/selectthread">トップ</a>
-	<a href="/keijiban/threadresult.jsp">スレッド選択</a>
-=======
 	<a href="index.html">トップ</a>
 	<a href="threadresult.jsp">スレッド選択</a>
->>>>>>> origin/master
 	<hr>
 	<br>
 	<from method='Post' action='newthread'>
