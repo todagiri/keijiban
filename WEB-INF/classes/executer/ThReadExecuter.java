@@ -33,8 +33,8 @@ public class ThReadExecuter extends Executer{
 				System.out.println(rs.getString(2));
 				tb.setCategory(rs.getString(3));
 				System.out.println(rs.getString(3));
-				tb.setCount(rs.getInt(4));
-				System.out.println(rs.getInt(4));
+				tb.setCount(rs.getDate(4).toString());
+				System.out.println(rs.getDate(4).toString());
 				
 				_tb.setThreadList(tb);
 			}
