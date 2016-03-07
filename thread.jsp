@@ -15,7 +15,7 @@
 	<a href="threadresult.jsp">スレッド選択</a>
 	<hr>
 	<br>
-	<from method='Post' action='threadnew'>
+	<from method='Post' action='newthread'>
 	タイトル:<input type='text' name='title' placeholder="全角50文字まで">
 	<select name='cat'>
 		<option value="パ">パ</option>
