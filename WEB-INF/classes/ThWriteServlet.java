@@ -18,7 +18,7 @@ public class ThWriteServlet extends HttpServlet{
 	WriteExecuter cWe =new WriteExecuter();
 	ThReadExecuter TRE=new ThReadExecuter();
 	
-	public void doGet(HttpServletRequest req,HttpServletResponse res)
+	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
 		
