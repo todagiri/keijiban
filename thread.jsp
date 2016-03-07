@@ -24,8 +24,8 @@
 		</select>
 		<br>
 		<br>
-		名前:<input type='text' name='name' placeholder="名無し（全角20文字まで）"><br>
-		<textarea name='text' cols='50' rows='5' placeholder="全角2000文字まで"></textarea><br><br>
+		名前:<input type='text' name='name' placeholder="名無し（全角10文字まで）"><br>
+		<textarea name='text' cols='50' rows='5' placeholder="全角1000文字まで"></textarea><br><br>
 		<input type='submit' value='スレッド作成'>
 	</form>
 
