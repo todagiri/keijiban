@@ -56,7 +56,7 @@
 				<td> <a href="/keijiban/showthread?thread=${tb.threadNo}"> <c:out value="${tb.title}" /> </a> </td>
 				<td> <c:out value="${tb.category}" /> </td>
 				<td> <c:out value="${tb.commentCount}" /> </td>
-			</tr>
+			</tr><br><br>
 		</c:forEach>
 	</table>
 	<br>
