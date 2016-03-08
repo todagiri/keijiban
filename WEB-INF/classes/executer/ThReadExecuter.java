@@ -28,13 +28,13 @@ public class ThReadExecuter extends Executer{
 				ThreadBean tb = new ThreadBean();
 				
 				tb.setThreadNo(rs.getInt(1));
-				System.out.println(rs.getInt(1));
+					System.out.println(rs.getInt(1));
 				tb.setTitle(rs.getString(2));
-				System.out.println(rs.getString(2));
+					System.out.println(rs.getString(2));
 				tb.setCategory(rs.getString(3));
-				System.out.println(rs.getString(3));
-				tb.setCount(rs.getDate(4).toString());
-				System.out.println(rs.getDate(4).toString());
+					System.out.println(rs.getString(3));
+				tb.setCount(rs.getInt(4));
+					System.out.println(rs.getInt(4));
 				
 				_tb.setThreadList(tb);
 			}
