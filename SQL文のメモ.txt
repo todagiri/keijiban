@@ -12,15 +12,14 @@ VALUES(10,20,'塩澤',SYSDATE,'オッちょこちょこ');
 commit;
 
 CREATE TABLE Thread(TH_NO NUMBER(2),
-		    TH_TITLE NUMBER(3),
+		    TH_TITLE VARCHAR2(100),
 		    TH_CATEGORY VARCHAR2(20),
 		    TH_COM_COUNT NUMBER(3));
 
 
-<<<<<<< HEAD
-INSERT INTO Thread( TH_NO, TH_TITLE, TH_CATEGORY, TH_CON_COUNT) 
-VALUES(10,20,'パ','6');
-=======
+INSERT INTO Thread( TH_NO, TH_TITLE, TH_CATEGORY, TH_COM_COUNT) 
+VALUES(10,'パスタ派かスパゲッティ派か','パ','6');
+
 INSERT INTO Thread(TH_NO, TH_TITLE, TH_CATEGORY, TH_COM_COUNT)
-VALUES(10,20,'パ','1');
->>>>>>> refs/remotes/ss15394913/master
+VALUES(1,'ｽﾊﾟｹﾞｯﾃｨﾕﾃﾞﾃｲｲ?','おっちょ','999');
+
