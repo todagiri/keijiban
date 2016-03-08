@@ -14,7 +14,7 @@ public class ThWriteExecuter extends Executer{
 	
 	public Object execute(Object bean){
 		accessor.connect();
-		
+				System.out.println ( "connect:success" );
 		int ThCount=0;
 
 		String sql = "SELECT MAX( TH_NO ) FROM THREAD";
@@ -41,7 +41,7 @@ public class ThWriteExecuter extends Executer{
 		accessor.write(sql);
 	
 		accessor.close();
-		
+		System.out.println ( "close:success" );
 		return ThCount;/*&Y*/
 		
 	}

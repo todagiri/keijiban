@@ -47,7 +47,7 @@
 	</c:if>
 	
 	</div>
-	<div id="biaoge">
+	<div id="biaoge" style=" text-align:left;">
 	
 		<tr> <th>タイトル</th> <th>カテゴリ</th> <th>レス数</th> </tr>
 		<br><br>
