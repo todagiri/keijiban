@@ -50,11 +50,12 @@
 	<div id="biaoge">
 	
 		<tr> <th>タイトル</th> <th>カテゴリ</th> <th>レス数</th> </tr>
+		<br><br>
 		<c:forEach var="tb" items="${al}">
 			<tr>
 				<td> <a href="/keijiban/showthread?thread=${tb.threadNo}"> <c:out value="${tb.title}" /> </a> </td>
 				<td> <c:out value="${tb.category}" /> </td>
-				<td> <c:out value="${tb.comentCount}" /> </td>
+				<td> <c:out value="${tb.commentCount}" /> </td>
 			</tr>
 		</c:forEach>
 	</table>
