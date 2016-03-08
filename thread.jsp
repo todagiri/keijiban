@@ -18,9 +18,9 @@
 	<from method='Post' action='newthread'>
 	タイトル:<input type='text' name='title' placeholder="全角50文字まで">
 	<select name='cat'>
-		<option value="パ">パ</option>
-		<option value="ス">ス</option>
-		<option value="タ">タ</option>
+		<option value="雑談">雑談</option>
+		<option value="ゲーム">ゲーム</option>
+		<option value="ﾊﾟｽﾀｧ">ﾊﾟｽﾀｧ</option>
 		</select>
 		<br>
 		<br>
