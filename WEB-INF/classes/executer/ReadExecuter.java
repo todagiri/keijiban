@@ -26,7 +26,7 @@ public class ReadExecuter extends Executer{
 			
 			rs.next();
 			tb.setThreadNo(rs.getInt(1));
-			String title = rs.getString(2);
+			String Title = rs.getString(2);
 			title = ReplaceCheck.check(title);
 			tb.setTitle(title);
 			tb.setCategory(rs.getString(3));
