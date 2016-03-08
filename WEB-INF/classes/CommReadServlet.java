@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ConReadServlet extends HttpServlet{
+public class CommReadServlet extends HttpServlet{
 	ReadExecuter RE = new ReadExecuter();
 	
-	public void doPost(HttpServletRequest req,HttpServletResponse res)
+	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
 		
