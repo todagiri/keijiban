@@ -75,7 +75,7 @@
   	</servlet>
   	<servlet-mapping>
   		<servlet-name>writethread</servlet-name>
-  		<url-pattern>/newthread</url-pattern>
+  		<url-pattern>/writethread</url-pattern>
   	</servlet-mapping>
   	
   	<servlet>

@@ -13,18 +13,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ThWriteServlet extends HttpServlet{
-	
+
 	ThWriteExecuter ThWe=new ThWriteExecuter();
 	WriteExecuter We =new WriteExecuter();
 	ThReadExecuter TRE=new ThReadExecuter();
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
+		
 		req.setCharacterEncoding("Windows-31J");
 		
 		ThreadBean TB=new ThreadBean();
 		CommentBean CB=new CommentBean();
-		
+		System.out.println("‚«‚Ä‚Ü‚·‚«‚Ä‚Ü‚·");
 		String title=req.getParameter("title");
 		String category=req.getParameter("cat");
 		String conname=req.getParameter("name");
@@ -58,7 +59,7 @@ public class ThWriteServlet extends HttpServlet{
 		ArrayList ArL=new ArrayList();
 		
 		ArL=(ArrayList)TRE.execute(a);
-		
+		System.out.println("‚«‚Ä‚Ü‚·‚«‚Ä‚Ü‚·");
 		req.setAttribute("al",ArL);
 		RequestDispatcher dispatcher= req.getRequestDispatcher("/threadresult.jsp");
 		dispatcher.forward(req,res);
