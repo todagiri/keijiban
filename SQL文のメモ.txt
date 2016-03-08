@@ -17,10 +17,10 @@ CREATE TABLE Thread(TH_NO NUMBER(2),
 		    TH_COM_COUNT NUMBER(3));
 
 
-<<<<<<< HEAD
+
 INSERT INTO Thread( TH_NO, TH_TITLE, TH_CATEGORY, TH_CON_COUNT) 
 VALUES(10,20,'ƒp','6');
-=======
+
 INSERT INTO Thread(TH_NO, TH_TITLE, TH_CATEGORY, TH_COM_COUNT)
 VALUES(10,20,'ƒp','1');
->>>>>>> refs/remotes/ss15394913/master
+
