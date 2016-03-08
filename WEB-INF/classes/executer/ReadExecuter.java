@@ -32,7 +32,7 @@ public class ReadExecuter extends Executer{
 			tb.setCategory(rs.getString(3));
 			tb.setCount(rs.getInt(4));
 			
-			sql = "SELECT TH_NO,CON_NO,CON_NAME,TO_CHAR(CON_DATE,'YYYY/MM/DD(DY) HH24:MI:SS'),CON_TEXT FROM CONTENTS WHERE TH_NO = "+ThreadNo+" ORDER BY CON_NO";
+			sql = "SELECT TH_NO,CON_NO,COM_NAME,TO_CHAR(COM_DATE,'YYYY/MM/DD(DY) HH24:MI:SS'),COM_TEXT FROM KOMMENT WHERE TH_NO = "+ThreadNo+" ORDER BY COM_NO";
 			rs = accessor.read(sql);
 			
 			while(rs.next()){
