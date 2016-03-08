@@ -33,7 +33,7 @@ public class ThWriteExecuter extends Executer{
 		
 		tb = ReplaceCheck.check(tb);
 		
-		sql = "INSERT INTO Thread( TH_NO, TH_TITLE, TH_CATEGORY, TH_CON_COUNT) VALUES(";
+		sql = "INSERT INTO Thread( TH_NO, TH_TITLE, TH_CATEGORY, TH_COM_COUNT) VALUES(";
 		//sql = sql.concat("1, "スレッドのタイトル", '"+cb.getName()+"', SYSDATE, '"+cb.getText()+"' )");
 		
 		//Thread表に投稿をインサート。
