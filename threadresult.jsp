@@ -53,7 +53,7 @@
 		<br><br>
 		<c:forEach var="tb" items="${al}">
 			<tr>
-				<td> <a href="/keijiban/showthread?thread=${tb.threadNo}"> <c:out value="${tb.title}" /> </a> </td>
+				<td> <a href="/kb/showthread?thread=${tb.threadNo}"> <c:out value="${tb.title}" /> </a> </td>
 				<td> <c:out value="${tb.category}" /> </td>
 				<td> <c:out value="${tb.commentCount}" /> </td>
 			</tr><br><br>
