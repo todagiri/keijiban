@@ -46,11 +46,11 @@
 			<textarea name='text' cols='50' rows='5' placeholder="全角2000文字まで"></textarea><br><br>
 			<input type='submit' value='書き込み'>
 			<input type="hidden" name="threadNo" value="${tb.threadNo}">
-			<input type="hidden" name="contentNo" value="${tb.contentsCount+1}">
+			<input type="hidden" name="commentNo" value="${tb.commentCount+1}">
 		</form>
 	</c:if>
 	
-	<c:if test="${tb.contentsCount >= 100}" >
+	<c:if test="${tb.commentCount >= 100}" >
 		投稿数が上限を超えました、このスレッドには投稿できません
 		<br>
 	</c:if>
