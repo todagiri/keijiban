@@ -16,7 +16,7 @@ public class CommWriteServlet extends HttpServlet{
 	WriteExecuter We=new WriteExecuter();
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
-	throws IOException,ServletException{		
+	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
 		
 		CommentBean CB=new CommentBean();

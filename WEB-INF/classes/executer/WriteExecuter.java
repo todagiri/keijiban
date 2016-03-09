@@ -20,15 +20,17 @@ public class WriteExecuter extends Executer{
 		//シングルクォート置換
 		cb = ReplaceCheck.check(cb);
 		
-		String sql = "INSERT INTO KOMMENT( TH_NO, CON_NO, CON_NAME, CON_DATE, COM_TEXT) VALUES(";
+		String sql = "INSERT INTO KOMMENT( TH_NO, COM_NO, COM_NAME, COM_DATE, COM_TEXT) VALUES(";
 		//sql = sql.concat("1, 0, '"+cb.getName()+"', SYSDATE, '"+cb.getText()+"' )");
 		
 		//Contents表に投稿をインサート。CON_NO（コンテンツの通し番号）はそのスレッドのコンテンツ数+1を格納。
-		sql = sql.concat(cb.getThreadNo()+", (SELECT th_con_count+1 FROM thread WHERE th_no = "+cb.getThreadNo()+"),'"+cb.getName()+"', SYSDATE, '"+cb.getText()+"')");
+		sql = sql.concat(cb.getThreadNo()+", (SELECT th_com_count+1 FROM thread WHERE th_no = "+cb.getThreadNo()+"),'"+cb.getName()+"', SYSDATE, '"+cb.getText()+"')");
+	System.out.println ( sql );
+	
 		accessor.write(sql);
 
 		//Thread表のTH_CON_COUNT（そのスレッドのコンテンツ数）を+1してアップデート。
-		sql = "UPDATE thread SET th_con_count = (SELECT th_con_count+1 FROM thread WHERE th_no = "+cb.getThreadNo()+") WHERE th_no = "+cb.getThreadNo();
+		sql = "UPDATE thread SET th_com_count = (SELECT th_com_count+1 FROM thread WHERE th_no = "+cb.getThreadNo()+") WHERE th_no = "+cb.getThreadNo();
 		accessor.write(sql);
 		
 		accessor.close();

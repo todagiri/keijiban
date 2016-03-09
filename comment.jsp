@@ -31,8 +31,8 @@
 	<a href="#footer">ƒy[ƒW‚Ìˆê”Ô‰º‚Ö«</a>
 	
 	<hr>
-	<c:forEach var="cb" items="${conList}">
-		<c:out value="${cb.contentNo}"/>:
+	<c:forEach var="cb" items="${comList}">
+		<c:out value="${cb.commentNo}"/>:
 		<c:out value="${cb.name}" />
 		<c:out value="${cb.date}"/><br>
 		<pre><c:out value="${cb.text}"/></pre> <br>
