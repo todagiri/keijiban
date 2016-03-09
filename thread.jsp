@@ -12,7 +12,7 @@
 	<div class="text" style=" text-align:center;">
 	<h1>スレッド作成フォーム</h1>
 	<a href="index.html">トップ</a>
-	<a href="threadresult.jsp">スレッド選択</a>
+	<a href="selectthread">スレッド選択</a>
 	<hr>
 	<br>
 	<form action='writethread' method='Post'>
