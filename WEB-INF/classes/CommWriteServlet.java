@@ -33,7 +33,7 @@ public class CommWriteServlet extends HttpServlet{
 		//バイト数を超えていないかのチェック-----------
 		boolean isError = ByteCheck.check(name,text);
 		if(isError){
-			res.sendRedirect("/keijiban/error.html");
+			res.sendRedirect("/error.html");
 			return;
 		}
 		//-------------------------------------------
@@ -51,7 +51,7 @@ public class CommWriteServlet extends HttpServlet{
 		ThreadBean tb = (ThreadBean) RE.execute(threadNo);
 		
 		req.setAttribute("tb",tb);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/Comment.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/comment.jsp");
 		dispatcher.forward(req,res);
 		//-----------------------------------------------------------------------------
 		
