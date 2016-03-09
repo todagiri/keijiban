@@ -28,13 +28,13 @@ public class ThWriteServlet extends HttpServlet{
 		String title=req.getParameter("title");
 		String category=req.getParameter("cat");
 		String comname=req.getParameter("name");
-		String cotext=req.getParameter("text");
+		String comtext=req.getParameter("text");
 		
 		if(comname.length()==0){
 			comname="–¼–³‚µ";
 		}
 		
-		boolean isError = ByteCheck.check(title,comname,cotext);
+		boolean isError = ByteCheck.check(title,comname,comtext);
 		if(isError){
 			res.sendRedirect("/keijiban/error.html");
 			return;
@@ -43,7 +43,7 @@ public class ThWriteServlet extends HttpServlet{
 		TB.setTitle(title);
 		TB.setCategory(category);
 		CB.setName(comname);
-		CB.setText(cotext);
+		CB.setText(comtext);
 		
 		ArrayList<CommentBean> AL=new ArrayList<>();
 		
