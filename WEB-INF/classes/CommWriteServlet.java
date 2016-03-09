@@ -33,7 +33,7 @@ public class CommWriteServlet extends HttpServlet{
 		//バイト数を超えていないかのチェック-----------
 		boolean isError = ByteCheck.check(name,text);
 		if(isError){
-			res.sendRedirect("/error.html");
+			res.sendRedirect("/kb/error.html");
 			return;
 		}
 		//-------------------------------------------
