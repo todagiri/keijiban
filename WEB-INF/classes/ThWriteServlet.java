@@ -36,7 +36,7 @@ public class ThWriteServlet extends HttpServlet{
 		
 		boolean isError = ByteCheck.check(title,comname,comtext);
 		if(isError){
-			res.sendRedirect("/keijiban/error.html");
+			res.sendRedirect("/kb/threaderror.html");
 			return;
 		}
 		
