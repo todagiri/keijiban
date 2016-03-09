@@ -18,7 +18,7 @@ public class ReadExecuter extends Executer{
 		
 		accessor.connect();
 		
-		String sql = "SELECT TH_NO,TH_TITLE,TH_CATEGORY,TH_COM_COUNT FROM Thread WHRER TH_NO = "+ThreadNo;
+		String sql = "SELECT TH_NO,TH_TITLE,TH_CATEGORY,TH_COM_COUNT FROM Thread WHERE TH_NO = "+ThreadNo;
 	
 		ThreadBean tb = new ThreadBean();
 		try{
