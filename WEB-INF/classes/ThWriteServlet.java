@@ -25,7 +25,6 @@ public class ThWriteServlet extends HttpServlet{
 		
 		ThreadBean TB=new ThreadBean();
 		CommentBean CB=new CommentBean();
-		System.out.println("‚«‚Ä‚Ü‚·‚«‚Ä‚Ü‚·");
 		String title=req.getParameter("title");
 		String category=req.getParameter("cat");
 		String conname=req.getParameter("name");

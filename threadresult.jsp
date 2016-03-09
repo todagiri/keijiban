@@ -47,9 +47,9 @@
 	</c:if>
 	
 	</div>
-	<div id="biaoge" style=" text-align:left;">
+	<div id="biaoge" style=" text-align:center;">
 	
-		<tr> <th>タイトル</th> <th>カテゴリ</th> <th>レス数</th> </tr>
+		<tr> <th>スレッド作成画面</th><br><th>タイトル</th> <th>カテゴリ</th> <th>レス数</th> </tr>
 		<br><br>
 		<c:forEach var="tb" items="${al}">
 			<tr>
