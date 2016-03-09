@@ -19,7 +19,7 @@ public class ThReadExecuter extends Executer{
 		
 		ThreadBean _tb = new ThreadBean();
 		
-		String sql = "SELECT * FROM THREAD ORDER BY TH_NO DESC";
+		String sql = "SELECT * FROM Thread ORDER BY TH_NO DESC";
 		try{
 			ResultSet rs = accessor.read(sql);
 			
