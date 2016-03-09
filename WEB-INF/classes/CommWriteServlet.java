@@ -16,7 +16,7 @@ public class CommWriteServlet extends HttpServlet{
 	WriteExecuter We=new WriteExecuter();
 	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
-	throws IOException,ServletException{		
+	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
 		
 		CommentBean CB=new CommentBean();
@@ -33,7 +33,7 @@ public class CommWriteServlet extends HttpServlet{
 		//バイト数を超えていないかのチェック-----------
 		boolean isError = ByteCheck.check(name,text);
 		if(isError){
-			res.sendRedirect("/error.html");
+			res.sendRedirect("/kb/error.html");
 			return;
 		}
 		//-------------------------------------------

@@ -9,6 +9,7 @@ import bean.CommentBean;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import check.ReplaceCheck;
+import java.util.Date;
 
 public class ReadExecuter extends Executer{
 	
@@ -36,22 +37,23 @@ public class ReadExecuter extends Executer{
 			rs = accessor.read(sql);
 			
 			while(rs.next()){
+
 				CommentBean cb = new CommentBean();
 				cb.setThreadNo(rs.getInt(1));
 				System.out.println(rs.getInt(1));
-				cb.setThreadNo(rs.getInt(2));
+				cb.setCommentNo(rs.getInt(2));
 				System.out.println(rs.getInt(2));
-				cb.setThreadNo(rs.getInt(3));
-				System.out.println(rs.getInt(3));
-				cb.setThreadNo(rs.getInt(4));
-				System.out.println(rs.getInt(4));
-				cb.setThreadNo(rs.getInt(5));
-				System.out.println(rs.getInt(5));
+				cb.setName(rs.getString(3));
+				System.out.println(rs.getString(3));
+
+				cb.setDate ( rs.getString(4) );
+				cb.setText (rs.getString(5) );
+				System.out.println(rs.getString(5));
 				
 				tb.setCommentList(cb);
 			}
 		}catch(SQLException e){
-			System.out.println("エラー：SQLException");
+			System.out.println("エラー：SQLException:readexecuter");
 		}
 		
 		accessor.close();
