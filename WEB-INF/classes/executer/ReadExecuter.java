@@ -18,7 +18,7 @@ public class ReadExecuter extends Executer{
 		
 		accessor.connect();
 		
-		String sql = "SELECT TH_NO,TH_TITLE,TH_CATEGORY,TH_COM_COUNT FROM THREAD WHRER TH_NO = "+ThreadNo;
+		String sql = "SELECT TH_NO,TH_TITLE,TH_CATEGORY,TH_COM_COUNT FROM Thread WHRER TH_NO = "+ThreadNo;
 	
 		ThreadBean tb = new ThreadBean();
 		try{
@@ -27,12 +27,12 @@ public class ReadExecuter extends Executer{
 			rs.next();
 			tb.setThreadNo(rs.getInt(1));
 			String Title = rs.getString(2);
-			title = ReplaceCheck.check(title);
-			tb.setTitle(title);
+			Title = ReplaceCheck.check(Title);
+			tb.setTitle(Title);
 			tb.setCategory(rs.getString(3));
 			tb.setCount(rs.getInt(4));
 			
-			sql = "SELECT TH_NO,CON_NO,COM_NAME,TO_CHAR(COM_DATE,'YYYY/MM/DD(DY) HH24:MI:SS'),COM_TEXT FROM KOMMENT WHERE TH_NO = "+ThreadNo+" ORDER BY COM_NO";
+			sql = "SELECT TH_NO,COM_NO,COM_NAME,TO_CHAR(COM_DATE,'YYYY/MM/DD(DY) HH24:MI:SS'),COM_TEXT FROM KOMMENT WHERE TH_NO = "+ThreadNo+" ORDER BY COM_NO";
 			rs = accessor.read(sql);
 			
 			while(rs.next()){
