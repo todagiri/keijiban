@@ -27,14 +27,14 @@ public class ThWriteServlet extends HttpServlet{
 		CommentBean CB=new CommentBean();
 		String title=req.getParameter("title");
 		String category=req.getParameter("cat");
-		String conname=req.getParameter("name");
+		String comname=req.getParameter("name");
 		String cotext=req.getParameter("text");
 		
-		if(conname.length()==0){
-			conname="–¼–³‚µ";
+		if(comname.length()==0){
+			comname="–¼–³‚µ";
 		}
 		
-		boolean isError = ByteCheck.check(title,conname,cotext);
+		boolean isError = ByteCheck.check(title,comname,cotext);
 		if(isError){
 			res.sendRedirect("/keijiban/error.html");
 			return;
@@ -42,7 +42,7 @@ public class ThWriteServlet extends HttpServlet{
 		
 		TB.setTitle(title);
 		TB.setCategory(category);
-		CB.setName(conname);
+		CB.setName(comname);
 		CB.setText(cotext);
 		
 		ArrayList<CommentBean> AL=new ArrayList<>();
