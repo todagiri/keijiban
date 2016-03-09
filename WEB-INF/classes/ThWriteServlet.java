@@ -25,6 +25,7 @@ public class ThWriteServlet extends HttpServlet{
 		
 		ThreadBean TB=new ThreadBean();
 		CommentBean CB=new CommentBean();
+		
 		String title=req.getParameter("title");
 		String category=req.getParameter("cat");
 		String comname=req.getParameter("name");
@@ -32,6 +33,9 @@ public class ThWriteServlet extends HttpServlet{
 		
 		if(comname.length()==0){
 			comname="–¼–³‚µ";
+		}
+		if(title.length()==0 || title == null){
+			title="–¼–³‚µ‚ÌƒXƒŒƒbƒh";
 		}
 		
 		boolean isError = ByteCheck.check(title,comname,comtext);
