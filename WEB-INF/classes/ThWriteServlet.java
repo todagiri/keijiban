@@ -53,6 +53,8 @@ public class ThWriteServlet extends HttpServlet{
 		
 		CB.setThreadNo(thc);
 		
+		We.execute ( CB );
+		
 		String a="";
 		
 		ArrayList ArL=new ArrayList();
