@@ -49,9 +49,10 @@
 	</div>
 	<div id="biaoge" style=" text-align:center;">
 	
-		<tr> <th>スレッド作成画面</th><br><th>タイトル</th> <th>カテゴリ</th> <th>レス数</th> </tr>
-		<br><br>
-		<c:forEach var="tb" items="${al}">
+		<tr> <th>スレッド作成画面</th></tr>
+		<br>
+		<br>
+				<c:forEach var="tb" items="${al}">
 			<tr>
 				<td> <a href="/kb/showthread?thread=${tb.threadNo}"> <c:out value="${tb.title}" /> </a> </td>
 				<td> <c:out value="${tb.category}" /> </td>
