@@ -26,8 +26,8 @@
 	
 	<h1> ${tb.title} </h1>
 	<h3>カテゴリ：${tb.category}</h3>
-	<a href="/testbb">トップ＞</a>
-	<a href="/testbb/selectthread">スレッド選択＞</a>
+	<a href="/kb">トップ＞</a>
+	<a href="/kb/selectthread">スレッド選択＞</a>
 	<a href="#footer">ページの一番下へ↓</a>
 	
 	<hr>
