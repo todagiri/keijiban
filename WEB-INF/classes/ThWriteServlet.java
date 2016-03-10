@@ -18,6 +18,11 @@ public class ThWriteServlet extends HttpServlet{
 	WriteExecuter We =new WriteExecuter();
 	ThReadExecuter TRE=new ThReadExecuter();
 	
+	String cTi 	=("");//checkTitle
+	String cC		=("");//checkCat
+	String cN	=("");//checkName
+	String cTe	=("");//checkText
+	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		
@@ -31,12 +36,31 @@ public class ThWriteServlet extends HttpServlet{
 		String comname=req.getParameter("name");
 		String comtext=req.getParameter("text");
 		
+		
+		
 		if(comname.length()==0){
 			comname="名無し";
 		}
 		if(title.length()==0 || title == null){
 			title="名無しのスレッド";
 		}
+		if(cTi.equals(title)){
+            res.sendRedirect("/kb/threaderror.html");
+			return;
+        }
+		if(cC.equals(category)){
+            res.sendRedirect("/kb/threaderror.html");
+			return;
+        }
+		if(cN.equals(comname)){
+            res.sendRedirect("/kb/threaderror.html");
+			return;
+        }
+		if(cTe.equals(comtext)){
+            res.sendRedirect("/kb/threaderror.html");
+			return;
+        }
+		
 		
 		boolean isError = ByteCheck.check(title,comname,comtext);
 		if(isError){
@@ -64,7 +88,14 @@ public class ThWriteServlet extends HttpServlet{
 		ArrayList ArL=new ArrayList();
 		
 		ArL=(ArrayList)TRE.execute(a);
-		System.out.println("きてますきてます");
+		
+		
+		cTi	=(title);//checkTitle
+		cC	=(category);//checkCat
+		cN	=(comname);//checkName
+		cTe	=(comtext);//checkText
+		
+		System.out.println("これがタイトルだ！！！"+title);
 		req.setAttribute("al",ArL);
 		RequestDispatcher dispatcher= req.getRequestDispatcher("/threadresult.jsp");
 		dispatcher.forward(req,res);
