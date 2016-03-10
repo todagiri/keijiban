@@ -15,6 +15,11 @@ public class CommWriteServlet extends HttpServlet{
 	
 	WriteExecuter We=new WriteExecuter();
 	
+	/*int		cTn 	=(0);//checkThreadNo
+		int		cCn		=(0);//checkCommentNo*/
+		String	cN	=("");//checkName
+		String	cTe	=("");//checkText
+	
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
 		req.setCharacterEncoding("Windows-31J");
@@ -26,9 +31,27 @@ public class CommWriteServlet extends HttpServlet{
 		String name=req.getParameter("name");
 		String text=req.getParameter("text");
 		
+		
+		
 		if(name.length()==0){
 			name="名無し";
 		}
+		/*if(cTn.equals(threadNo)){
+            res.sendRedirect("/kb/error.html");
+			return;
+        }
+		if(cCn.equals(CommentNo)){
+            res.sendRedirect("/kb/error.html");
+			return;
+        }*/
+		if(cN.equals(name)){
+            res.sendRedirect("/kb/error.html");
+			return;
+        }
+		if(cTe.equals(text)){
+            res.sendRedirect("/kb/error.html");
+			return;
+        }
 		
 		//バイト数を超えていないかのチェック-----------
 		boolean isError = ByteCheck.check(name,text);
@@ -43,6 +66,11 @@ public class CommWriteServlet extends HttpServlet{
 		CB.setCommentNo(CommentNo);
 		CB.setName(name);
 		CB.setText(text);
+		
+		
+		cN	=(name);//checkName
+		cTe	=(text);//checkText
+		
 		
 		We.execute(CB);
 		
