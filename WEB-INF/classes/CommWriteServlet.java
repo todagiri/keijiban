@@ -59,7 +59,7 @@ public class CommWriteServlet extends HttpServlet{
 			res.sendRedirect("/kb/error.html");
 			return;
 		}
-		//-------------------------------------------
+		//--------------------------------------------
 		
 		
 		CB.setThreadNo(threadNo);
